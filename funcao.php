@@ -32,6 +32,11 @@ class Database{
                 return false;
             }
         }
+
+       /* function alert($message){
+           echo "<script>alert('$message');</script>";
+        }*/
+
     //funçao de consultar(selecionar todos os dados) alunos
         public function Consulta_alunos($id=null){
             $sql = "SELECT * FROM `alunos`";

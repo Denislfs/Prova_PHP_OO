@@ -10,8 +10,11 @@
  
 	 $res = $database->Cadastrar_Aluno($ra, $nome, $sobrenome, $idade);
 	 if($res){
-	 	echo "Cadastrado com Sucesso";
-        header("location: index.php");
+         function alert($message){
+             echo "<script>alert('$message')</script>";
+         }
+        alert("Cadastrado com sucesso");        
+       // header("location: index.php");
 	 }else{
 	 	echo "Falha ao cadastrar";
 	 }
@@ -32,18 +35,18 @@
         <p>cadastro de Alunos.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  method="POST">
                 <label>RA</label>
-                <input type="text" name="ra" placeholder="ra">
+                <input type="text" name="ra" placeholder="ra" required autofocus>
                 <br><br>
                 <label>Nome</label>
-                <input type="text" name="nome" placeholder="nome">
+                <input type="text" name="nome" placeholder="nome" required autofocus>
                 <br><br>
                 <label>Sobrenome</label>
-                <input type="text" name="sobrenome" placeholder="sobrenome">
+                <input type="text" name="sobrenome" placeholder="sobrenome" required autofocus>
                 <br><br>
                 <label>Idade</label>
-                <input type="text" name="idade" placeholder="Idade">
+                <input type="text" name="idade" placeholder="Idade" required autofocus>
                 <br><br>
-                <input type="submit" class="btn btn-primary" value="Cadastrar" onclick="cad()">
+                <input type="submit" class="btn btn-primary" value="Cadastrar">
                           
         </form>
     </div>  
@@ -52,11 +55,7 @@
         include_once('footer.php');
     ?>
 
-    <script>
-        function cad(){
-            alert("Cadastrado com sucesso!!");
-        }
-    </script>
+    
 
 
 

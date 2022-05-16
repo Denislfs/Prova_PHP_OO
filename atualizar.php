@@ -35,36 +35,31 @@
 	<div class="form-group">
 	    <label for="input1" class="col-sm-2 control-label">RA</label>
 	    <div class="col-sm-10">
-	      <input type="text" name="ra"  class="form-control" id="input1" value="<?php echo $r['ra'] ?>" placeholder="RA" />
+	      <input type="text" name="ra" required autofocus  class="form-control" id="input1" value="<?php echo $r['ra'] ?>" placeholder="RA" />
 	    </div>
 	</div>
  
 	<div class="form-group">
 	    <label for="input1" class="col-sm-2 control-label">Nome</label>
 	    <div class="col-sm-10">
-	      <input type="text" name="nome"  class="form-control" id="input1" value="<?php echo $r['nome'] ?>" placeholder="Nome" />
+	      <input type="text" name="nome" required autofocus class="form-control" id="input1" value="<?php echo $r['nome'] ?>" placeholder="Nome" />
 	    </div>
 	</div>
  
 	<div class="form-group">
 	    <label for="input1" class="col-sm-2 control-label">Sobrenome</label>
 	    <div class="col-sm-10">
-	      <input type="text" name="sobrenome"  class="form-control" id="input1" value="<?php echo $r['sobrenome'] ?>" placeholder="sobrenome" />
+	      <input type="text" name="sobrenome" required autofocus class="form-control" id="input1" value="<?php echo $r['sobrenome'] ?>" placeholder="sobrenome" />
 	    </div>
 	</div>
     
 	<div class="form-group">
 	    <label for="input1" class="col-sm-2 control-label">Idade</label>
 	    <div class="col-sm-10">
-	      <input type="text" name="idade"  class="form-control" id="input1" value="<?php echo $r['idade'] ?>" placeholder="Idade" />
+	      <input type="text" name="idade" required autofocus  class="form-control" id="input1" value="<?php echo $r['idade'] ?>" placeholder="Idade" />
 	    </div>
 	</div>
-    <input type="submit" onclick="cad()" class="btn btn-primary" value="Atualizar">
+    <input type="submit" class="btn btn-primary" value="Atualizar">
 
-	<script>
-        function cad(){
-            alert("Cadastrado com sucesso!!");
-        }
-    </script>
 </body>
 </html>
