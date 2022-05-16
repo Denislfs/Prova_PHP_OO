@@ -6,7 +6,7 @@ Nesse cadastro, teremos as seguintes informações:
 * Ra
 * Nome
 * Sobrenome
-* Sexo
+* Idade
 
 Vamos utilizar banco de dados MySQL e orientação a objetos para separar o acesso ao banco de dados.
 
