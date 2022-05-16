@@ -59,7 +59,12 @@
 	      <input type="text" name="idade"  class="form-control" id="input1" value="<?php echo $r['idade'] ?>" placeholder="Idade" />
 	    </div>
 	</div>
-    <input type="submit" class="btn btn-primary" value="Atualizar">
+    <input type="submit" onclick="cad()" class="btn btn-primary" value="Atualizar">
 
+	<script>
+        function cad(){
+            alert("Cadastrado com sucesso!!");
+        }
+    </script>
 </body>
 </html>
