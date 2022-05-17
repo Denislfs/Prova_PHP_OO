@@ -7,16 +7,30 @@ class Database{
     public $password = "";
     public $dbname = "cadastro";
     //Criando a conexao ao banco
-        public function Conectar_Banco(){
+      /*  public function Conectar_Banco(){
+           
+            }
+        }*/
+        
+    //funçao construct para conectar ao banco
+        function __construct(){
             $this->connection = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
             if(mysqli_connect_error()) {
                 die("Falha na conexão: " . mysqli_connect_error());
-            }
         }
-    //funçao construct para conectar ao banco
-        function __construct(){
-            $this->Conectar_Banco();
+    }
+
+    public function Validar_Nome(){
+        if (is_numeric($nome,$sobrenome)){ 
+            echo "Tipo de dado inserido incorreto";        
+        }    
+    }
+
+    public function Validar_Numeric(){
+        if (!is_numeric($ra, $idade)){
+            echo "RA e Idade necessitam ser númericos";
         }
+    }
 
     //funçao destruct para fechar a conexao
         public function __destruct(){
@@ -71,7 +85,7 @@ class Database{
 
  
 $database = new Database();
-$database->Conectar_Banco();
+
 
  
 ?>

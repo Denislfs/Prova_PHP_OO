@@ -35,7 +35,7 @@
 	<div class="form-group">
 	    <label for="input1" class="col-sm-2 control-label">RA</label>
 	    <div class="col-sm-10">
-	      <input type="text" name="ra" required autofocus  class="form-control" id="input1" value="<?php echo $r['ra'] ?>" placeholder="RA" />
+	      <input type="number"  oninput="this.value=this.value.replace(/[^0-9]/g,'')" name="ra" required autofocus  class="form-control" id="input1" value="<?php echo $r['ra'] ?>" placeholder="RA" />
 	    </div>
 	</div>
  
@@ -56,7 +56,7 @@
 	<div class="form-group">
 	    <label for="input1" class="col-sm-2 control-label">Idade</label>
 	    <div class="col-sm-10">
-	      <input type="text" name="idade" required autofocus  class="form-control" id="input1" value="<?php echo $r['idade'] ?>" placeholder="Idade" />
+	      <input type="number" oninput="this.value=this.value.replace(/[^0-9]/g,'')" name="idade" required autofocus  class="form-control" id="input1" value="<?php echo $r['idade'] ?>" placeholder="Idade" />
 	    </div>
 	</div>
     <input type="submit" class="btn btn-primary" value="Atualizar">

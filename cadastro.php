@@ -35,7 +35,7 @@
         <p>cadastro de Alunos.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  method="POST">
                 <label>RA</label>
-                <input type="text" name="ra" placeholder="ra" required autofocus>
+                <input type="number" oninput="this.value=this.value.replace(/[^0-9]/g,'')" name="ra" placeholder="ra" required autofocus>
                 <br><br>
                 <label>Nome</label>
                 <input type="text" name="nome" placeholder="nome" required autofocus>
@@ -44,7 +44,7 @@
                 <input type="text" name="sobrenome" placeholder="sobrenome" required autofocus>
                 <br><br>
                 <label>Idade</label>
-                <input type="text" name="idade" placeholder="Idade" required autofocus>
+                <input type="number" oninput="this.value=this.value.replace(/[^0-9]/g,'')" name="idade" placeholder="Idade" required autofocus>
                 <br><br>
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
                           
@@ -54,10 +54,6 @@
     <?php
         include_once('footer.php');
     ?>
-
-    
-
-
 
 </body>
 </html>
